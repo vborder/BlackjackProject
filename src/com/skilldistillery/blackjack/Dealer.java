@@ -18,7 +18,7 @@ public class Dealer extends Player {
 		player.getHand().addCard(deck.dealCard());
 		this.getHand().addCard(deck.dealCard());
 		player.getHand().addCard(deck.dealCard());
-		this.getHand().addCard(deck.dealCard());
+//		this.getHand().addCard(deck.dealCard());
 	}
 	
 	public Card dealCard() {
@@ -29,8 +29,16 @@ public class Dealer extends Player {
 		player.getHand().addCard(deck.dealCard());
 	}
 	
+	public void dGameDeal() {
+		this.getHand().addCard(deck.dealCard());
+	}
+	
 	@Override
 	public String toString() {
-		return "Dealer's hand: " + getHand() + " " + "Hand value: " + getHandValue();
+		return "Dealer's hand: " + getHand().toString();
+	}
+	
+	public String toString2() {
+		return "Dealer's hand: " + getHand() + " Hand value: " + getHandValue();
 	}
 }

@@ -13,26 +13,24 @@ public class Player {
 		
 	}
 	
-//	public Player(Hand hand) {
-//		this.hand = hand;
-//		this.getHand();
-//	}
-	
 	public void setHand(Hand hand) {
 		
 	}
 	
 	public Hand getHand() {
 		return hand;
+		
 	}
 
 	public void addCard(Card card) {
 		hand.addCard(card);
+		
 	}
 	
 	public int getHandValue() {
-		int value = 0;
-		return value;
+		
+		return hand.getHandValue();
+		
 	}
 	
 	public void setHandValue() {
@@ -49,7 +47,7 @@ public class Player {
 
 	@Override
 	public String toString() {
-		return name + "'s hand: " + getHand() + " " + "Hand's value: " + getHandValue();
+		return name + "'s hand: " + getHand() + " " + "Hand value: " + getHandValue();
 	}
 	
 }

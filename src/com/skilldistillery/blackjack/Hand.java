@@ -18,10 +18,7 @@ abstract class Hand {
 		
 	}
 	
-	public int getHandValue(int value) {
-		value = 0;
-		return value;
-	}
+	public abstract int getHandValue();
 
 	public List<Card> getHand() {
 		return h;
