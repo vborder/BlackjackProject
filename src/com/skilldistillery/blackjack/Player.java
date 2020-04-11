@@ -3,18 +3,23 @@ package com.skilldistillery.blackjack;
 public class Player {
 	
 	private String name;
-	private Hand hand;
+	private Hand hand = new BlackjackHand();
 	
 	public Player(String name) {
 		this.name = name;
 	}
 	
-	public Player(Hand hand) {
-		this.getHand();
+	public Player() {
+		
 	}
 	
+//	public Player(Hand hand) {
+//		this.hand = hand;
+//		this.getHand();
+//	}
+	
 	public void setHand(Hand hand) {
-		this.hand = hand;
+		
 	}
 	
 	public Hand getHand() {
@@ -25,7 +30,12 @@ public class Player {
 		hand.addCard(card);
 	}
 	
-	public Player() {
+	public int getHandValue() {
+		int value = 0;
+		return value;
+	}
+	
+	public void setHandValue() {
 		
 	}
 
@@ -39,7 +49,7 @@ public class Player {
 
 	@Override
 	public String toString() {
-		return name; // + hand score
+		return name + "'s hand: " + getHand() + " " + "Hand's value: " + getHandValue();
 	}
 	
 }

@@ -24,4 +24,13 @@ public class Dealer extends Player {
 	public Card dealCard() {
 		return deck.dealCard();
 	}
+	
+	public void gameDeal(Player player) {
+		player.getHand().addCard(deck.dealCard());
+	}
+	
+	@Override
+	public String toString() {
+		return "Dealer's hand: " + getHand() + " " + "Hand value: " + getHandValue();
+	}
 }
