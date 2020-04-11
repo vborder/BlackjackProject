@@ -11,25 +11,25 @@ public class Deck {
 		cards = createDeck();
 	}
 
-	private List<Card> createDeck() {
-		List<Card> deck = new ArrayList<>(52);
+	public List<Card> createDeck() {
+		cards = new ArrayList<>(52);
 
 		for (Suit s : Suit.values()) {
 			for (Rank r : Rank.values()) {
-				deck.add(new Card(r, s));
+				cards.add(new Card(r, s));
 			}
 		}
-		return deck;
-	}
-
-	public int checkDeckSize() {
-		return cards.size();
+		return cards;
 	}
 
 	public void shuffle() {
-		Collections.shuffle(cards);
+		Collections.shuffle(this.cards);
 	}
-
+	
+	public int cardsLeftInDeck() {
+		return cards.size();
+	}
+	
 	public Card dealCard() {
 		return cards.remove(0);
 	}
