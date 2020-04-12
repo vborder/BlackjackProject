@@ -15,7 +15,11 @@ abstract class Hand {
 	}
 	
 	public void clear() {
-		
+		h.removeAll(h);
+	}
+	
+	public void replenish() {
+		h.addAll(h);
 	}
 	
 	public abstract int getHandValue();

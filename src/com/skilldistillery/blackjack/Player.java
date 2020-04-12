@@ -13,6 +13,10 @@ public class Player {
 		
 	}
 	
+	public void clear() {
+		hand.clear();
+	}
+	
 	public void setHand(Hand hand) {
 		
 	}
@@ -28,7 +32,6 @@ public class Player {
 	}
 	
 	public int getHandValue() {
-		
 		return hand.getHandValue();
 		
 	}
@@ -49,5 +52,6 @@ public class Player {
 	public String toString() {
 		return name + "'s hand: " + getHand() + " " + "Hand value: " + getHandValue();
 	}
+
 	
 }

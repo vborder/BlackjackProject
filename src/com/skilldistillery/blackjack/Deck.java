@@ -30,6 +30,10 @@ public class Deck {
 		return cards.size();
 	}
 	
+	public void replenish() {
+		cards.addAll(cards);
+	}
+	
 	public Card dealCard() {
 		return cards.remove(0);
 	}
