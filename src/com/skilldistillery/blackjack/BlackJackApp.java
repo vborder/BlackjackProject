@@ -23,7 +23,7 @@ public class BlackJackApp {
 		Player player = new Player(name);
 
 		while (menu != false) {
-			System.out.println("What would you like to do, " + name + " ? \n");
+			System.out.println("Please choose an option, " + name + ".\n");
 			System.out.println("1. Play BlackJack");
 			System.out.println("2. Quit Game");
 			int gameChoice = kb.nextInt();
@@ -65,19 +65,26 @@ public class BlackJackApp {
 			((BlackjackHand) player.getHand()).isBlackjack();
 			System.exit(0);
 //			break;
-			dealer.dealCard();
+//			dealer.dealCard();
 			if (dealer.getHandValue() == 21) {
 				System.out.println("You tied with the dealer!");
-				System.out.println("Would you like to play another hand? Enter \"1\" for yes or"
-						+ "\2\" for no.");
-				gameChoice = kb.nextInt();
-				if( gameChoice == 1) {
-					playBlackJack(player);
-				} else { 
-					System.out.println("Thanks for playing!");
-					System.exit(0);
-				}
+				System.out.println("Thanks for playing!");
+				System.exit(0);
+//				System.out.println("Would you like to play another hand? Enter \"1\" for yes or"
+//						+ "\2\" for no.");
+//				gameChoice = kb.nextInt();
+//				if( gameChoice == 1) {
+//					playBlackJack(player);
+//				} else { 
 			}
+			if(player.getHandValue() < 21) {
+				((BlackjackHand) player.getHand()).isBust();
+				System.exit(0);
+			}
+//		if(dealer.getHandValue() == 21 && player.getHandValue() < 21) {
+//			System.out.println("Blackjack! The Dealer wins!");
+//			System.exit(0);
+//		}
 		}
 		
 	while(true) {
@@ -91,7 +98,7 @@ public class BlackJackApp {
 			System.out.println(player.toString());
 			if (player.getHandValue() > 21) {
 				((BlackjackHand) player.getHand()).isBust();
-				System.exit(0);;
+				System.exit(0);
 //				break;
 			}
 		}
@@ -114,7 +121,12 @@ public class BlackJackApp {
 				} else {
 					System.out.println("Dealer stays.");
 				}
-			} 
+			}
+			
+			if (dealer.getHandValue() == 21 && player.getHandValue() < 21) {
+				System.out.println("Dealer has 21! She wins!");
+				System.exit(0);;
+			}
 			
 			if(player.getHandValue() > dealer.getHandValue()) {
 				System.out.println(player.getName() + " wins!");
