@@ -41,10 +41,11 @@ public class Dealer extends Player {
 	}
 
 	public void replenish() {
-//		System.out.println("Cards remaining in deck: " + deck.cardsLeftInDeck());
-		if (deck.cardsLeftInDeck() < 20) {
-			System.out.println("Dealer is restocking the deck.\n");
+		System.out.println("Cards remaining in deck: " + deck.cardsLeftInDeck());
+		if (deck.cardsLeftInDeck() < 32) { //dealer restocks and reshuffles every 5 hands
+			System.out.println("Dealer is restocking and reshuffling the deck.\n");
 			deck.createDeck();
+			deck.shuffle();
 		}
 	}
 
