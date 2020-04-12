@@ -25,15 +25,15 @@ public class Deck {
 	public void shuffle() {
 		Collections.shuffle(this.cards);
 	}
-	
+
 	public int cardsLeftInDeck() {
 		return cards.size();
 	}
-	
+
 	public void replenish() {
 		cards.addAll(cards);
 	}
-	
+
 	public Card dealCard() {
 		return cards.remove(0);
 	}
