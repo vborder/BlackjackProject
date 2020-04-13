@@ -2,7 +2,7 @@
 
 ### Overview
 
-The project BlackJack is deisgned to:
+The project BlackJack is designed to:
 
 - Allow a user to play the card game BlackJack against a Dealer;
 
