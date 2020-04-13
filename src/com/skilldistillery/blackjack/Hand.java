@@ -25,7 +25,7 @@ abstract class Hand { // user story #1
 	public abstract int getHandValue();
 
 	public List<Card> getHand() {
-		return h;
+		return this.h;
 	}
 
 	public void setHand(List<Card> h) {
