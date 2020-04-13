@@ -3,7 +3,7 @@ package com.skilldistillery.blackjack;
 import java.util.ArrayList;
 import java.util.List;
 
-abstract class Hand {
+abstract class Hand { // user story #1
 	List<Card> h = new ArrayList<>();
 
 	public Hand() {

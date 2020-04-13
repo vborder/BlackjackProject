@@ -17,7 +17,7 @@ public class Dealer extends Player {
 		this.deck.shuffle();
 	}
 
-	public void dealCards(Player player) {
+	public void dealCards(Player player) { // user story #2
 		player.getHand().addCard(deck.dealCard());
 		this.getHand().addCard(deck.dealCard());
 		player.getHand().addCard(deck.dealCard());
@@ -39,8 +39,7 @@ public class Dealer extends Player {
 		return deck.cardsLeftInDeck();
 	}
 
-	public void replenish() {
-		System.out.println("Cards remaining in deck: " + deck.cardsLeftInDeck());
+	public void replenish() { 
 		if (deck.cardsLeftInDeck() < 32) { // dealer restocks and reshuffles every 5 hands
 			System.out.println("Dealer is restocking and reshuffling the deck.\n");
 			deck.createDeck();

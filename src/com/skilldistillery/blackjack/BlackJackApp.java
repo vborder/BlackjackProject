@@ -56,15 +56,15 @@ public class BlackJackApp {
 		boolean keepGoing = true;
 
 		while (keepGoing) {
-			dealer.replenish();
-			dealer.clear();
+			dealer.replenish(); // user story #2
+			dealer.clear(); 
 			player.clear();
-			dealer.dealCards(player);
+			dealer.dealCards(player); // user story #3
 			System.out.println(player.toString());
 			System.out.println(dealer.toString() + "\n");
 			dealer.dGameDeal();
 
-			if (player.getHandValue() == 21) {
+			if (player.getHandValue() == 21) { // user story #5, stretch goal
 				((BlackjackHand) player.getHand()).isBlackjack();
 				System.out.println(dealer.toString2());
 				
@@ -103,7 +103,7 @@ public class BlackJackApp {
 					}
 				}
 
-				if (gameChoice == 2) {
+				if (gameChoice == 2) { // // user story #4
 					System.out.println(dealer.toString2());
 
 					while (dealer.getHandValue() < 17) {
