@@ -1,6 +1,5 @@
 package com.skilldistillery.blackjack;
 
-//import java.util.Collections;
 import java.util.List;
 
 public class Dealer extends Player {
@@ -42,7 +41,7 @@ public class Dealer extends Player {
 
 	public void replenish() {
 		System.out.println("Cards remaining in deck: " + deck.cardsLeftInDeck());
-		if (deck.cardsLeftInDeck() < 32) { //dealer restocks and reshuffles every 5 hands
+		if (deck.cardsLeftInDeck() < 32) { // dealer restocks and reshuffles every 5 hands
 			System.out.println("Dealer is restocking and reshuffling the deck.\n");
 			deck.createDeck();
 			deck.shuffle();

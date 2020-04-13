@@ -4,7 +4,6 @@ public class BlackjackHand extends Hand {
 
 	public BlackjackHand() {
 		super();
-
 	}
 
 	public int getHandValue() {
@@ -15,7 +14,6 @@ public class BlackjackHand extends Hand {
 		}
 
 		return handValue;
-
 	}
 
 	public int getDealerHandValue() {
@@ -42,8 +40,7 @@ public class BlackjackHand extends Hand {
 			System.out.println("You busted! Game over.\n");
 			return true;
 		}
-		
+
 		return false;
 	}
-
 }

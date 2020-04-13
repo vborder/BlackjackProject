@@ -19,6 +19,7 @@ public class Deck {
 				cards.add(new Card(r, s));
 			}
 		}
+
 		return cards;
 	}
 

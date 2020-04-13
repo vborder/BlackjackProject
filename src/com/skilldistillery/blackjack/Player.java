@@ -17,28 +17,25 @@ public class Player {
 		hand.clear();
 	}
 
-	public void setHand(Hand hand) {
-
-	}
+//	public void setHand(Hand hand) {
+//
+//	}
 
 	public Hand getHand() {
 		return hand;
-
 	}
 
 	public void addCard(Card card) {
 		hand.addCard(card);
-
 	}
 
 	public int getHandValue() {
 		return hand.getHandValue();
-
 	}
 
-	public void setHandValue() {
-
-	}
+//	public void setHandValue() {
+//
+//	}
 
 	public String getName() {
 		return name;
@@ -52,5 +49,4 @@ public class Player {
 	public String toString() {
 		return name + "'s hand: " + getHand() + " " + "Hand value: " + getHandValue();
 	}
-
 }

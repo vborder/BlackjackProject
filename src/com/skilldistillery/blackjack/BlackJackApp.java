@@ -84,11 +84,11 @@ public class BlackJackApp {
 			}
 		}
 		
-
 		while (true) {
 			if (player.getHandValue() == 21) {
 				break;
-			} else {
+			} 
+			else {
 				System.out.println("What would you like to do?");
 				System.out.println("1. Hit me!");
 				System.out.println("2. Stay.");
@@ -108,7 +108,7 @@ public class BlackJackApp {
 
 					while (dealer.getHandValue() < 17) {
 						dealer.dGameDeal();
-						System.out.println("\nDealer deals herself a card.\n");
+						System.out.println("\nDealer deals herself a card.");
 						System.out.println(dealer.toString2());
 					}
 
@@ -128,19 +128,19 @@ public class BlackJackApp {
 					}
 
 					if (player.getHandValue() > dealer.getHandValue()) {
-						System.out.println(player.getName() + " wins!\n");
+						System.out.println("You win!\n");
 						break;
-					} else if (player.getHandValue() < dealer.getHandValue()) {
+					} 
+					else if (player.getHandValue() < dealer.getHandValue()) {
 						System.out.println("Dealer wins!\n");
 						break;
-					} else {
+					} 
+					else {
 						System.out.println("You tied!\n");
 						break;
 					}
-
 				}
 			}
 		}
-
 	}
 }
