@@ -22,11 +22,11 @@ abstract class Hand { // user story #1
 		h.addAll(h);
 	}
 
-	public abstract int getHandValue();
-
 	public List<Card> getHand() {
 		return this.h;
 	}
+	
+	public abstract int getHandValue();
 
 	public void setHand(List<Card> h) {
 		this.h = h;

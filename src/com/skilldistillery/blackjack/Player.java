@@ -17,9 +17,9 @@ public class Player {
 		hand.clear();
 	}
 
-//	public void setHand(Hand hand) {
-//
-//	}
+	public void setHand(Hand hand) {
+
+	}
 
 	public Hand getHand() {
 		return hand;
@@ -33,9 +33,9 @@ public class Player {
 		return hand.getHandValue();
 	}
 
-//	public void setHandValue() {
-//
-//	}
+	public void setHandValue() {
+
+	}
 
 	public String getName() {
 		return name;
